@@ -1,8 +1,9 @@
 # coding=utf-8
 from django.urls import path
-from pages.views import HomePageView,AboutPageView
+
+import pages.views
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name='home'),
-    path('about/', AboutPageView.as_view(), name='about'),
+    path('', pages.views.HomePageView.as_view(), name='home'),
+    path('about/', pages.views.AboutPageView.as_view(), name='about'),
 ]
