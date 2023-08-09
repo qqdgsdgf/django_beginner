@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
     'posts.apps.PostsConfig',
+    'blog.apps.BlogConfig',  # new
 ]
 
 MIDDLEWARE = [
@@ -101,6 +102,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']  # new
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

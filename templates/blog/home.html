@@ -1,0 +1,12 @@
+<!-- templates/blog/home.html -->
+{% extends 'blog/base.html' %}
+
+{% block content %}
+{% for blog in blog_list %}
+  <div class='blog-entry'>
+  <h2><a href='{% url 'blogdetail' blog.pk %}'>{{ blog.title }}</a></h2>
+    <p>{{ blog.body }}</p>
+  </div>
+
+{% endfor %}
+{% endblock content %}
